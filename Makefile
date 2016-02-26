@@ -1,3 +1,7 @@
+all: rettungsplan.pdf
+
+
+
 rettungsplan.svg: Grundriss.svg
 	# TODO this will open up the gui...
 	cp Grundriss.svg rettungsplan.svg
@@ -5,7 +9,7 @@ rettungsplan.svg: Grundriss.svg
 		--select=layer1 --verb=EditDelete \
 		--select=layer4 --verb=EditDelete \
 		--select=layer3 --verb=EditDelete \
-		--verb=FileSave --verb=FileClose
+		--verb=FileSave --verb=FileClose --verb=FileQuit
 
 %.png: %.svg
 	inkscape $< --export-png=$@ --export-dpi=300
@@ -13,5 +17,3 @@ rettungsplan.svg: Grundriss.svg
 %.pdf: %.svg
 	inkscape $< --export-pdf=$@ --export-dpi=300
 
-
-all: rettungsplan.png
