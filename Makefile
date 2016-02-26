@@ -1,4 +1,4 @@
-all: rettungsplan.pdf rettungsplan.png floorplan.png
+all: rettungsplan.png floorplan.png
 	rm rettungsplan.svg floorplan.svg
 
 
