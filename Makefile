@@ -1,5 +1,5 @@
-all: rettungsplan.png floorplan.png
-	rm rettungsplan.svg floorplan.svg
+all: rettungsplan.png floorplan.png network.png
+	rm rettungsplan.svg floorplan.svg network.svg
 
 
 rettungsplan.svg: Grundriss.svg
@@ -29,6 +29,9 @@ network.svg: Grundriss.svg
 		--verb=FileSave --verb=FileClose --verb=FileQuit
 
 floorplan.png: floorplan.svg
+	inkscape $< --export-png=$@ --export-dpi=300 --export-area-drawing
+
+network.png: network.svg
 	inkscape $< --export-png=$@ --export-dpi=300 --export-area-drawing
 
 %.png: %.svg
