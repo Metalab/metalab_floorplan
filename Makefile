@@ -1,4 +1,5 @@
 rettungsplan.svg: Grundriss.svg
+	# TODO this will open up the gui...
 	cp Grundriss.svg rettungsplan.svg
 	inkscape $@ \
 		--select=layer1 --verb=EditDelete \
