@@ -1,4 +1,4 @@
-all: rettungsplan.pdf
+all: rettungsplan.pdf rettungsplan.png
 
 
 rettungsplan.svg: Grundriss.svg
