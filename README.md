@@ -7,7 +7,7 @@ Generate images like this one:
 
 ![Flucht- und Rettungsplan](rettungsplan.png)
 
-    or this type
+or this type
 
 ![Metalab Overview](floorplan.png)
 
