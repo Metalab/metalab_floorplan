@@ -90,9 +90,9 @@
      showgrid="false"
      showguides="false"
      inkscape:guide-bbox="true"
-     inkscape:zoom="0.60628608"
-     inkscape:cx="730.70454"
-     inkscape:cy="662.05832"
+     inkscape:zoom="0.857418"
+     inkscape:cx="600.70255"
+     inkscape:cy="483.41552"
      inkscape:window-x="2360"
      inkscape:window-y="144"
      inkscape:current-layer="layer1"
@@ -271,13 +271,13 @@
          sodipodi:linespacing="125%"
          id="text3064-1-8-4-7-3-2-5"
          y="113.07195"
-         x="832.77075"
+         x="827.1322"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.76304722px;line-height:125%;font-family:Courier;-inkscape-font-specification:Courier;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            id="tspan3224-8-2-9-6"
            y="113.07195"
-           x="832.77075"
-           sodipodi:role="line">T.B.D.</tspan></text>
+           x="827.1322"
+           sodipodi:role="line">3D Stuff</tspan></text>
 <path
          inkscape:connector-curvature="0"
          id="path4151-1"
@@ -343,7 +343,24 @@
            y="117.82176"
            x="110.63815"
            sodipodi:role="line">Soccer</tspan></text>
-</g></g><image
+</g><text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.85190487px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="260.9552"
+       y="-162.69072"
+       id="text8708"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8710"
+         x="260.9552"
+         y="-162.69072"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Courier;-inkscape-font-specification:Courier">Electronic</tspan><tspan
+         sodipodi:role="line"
+         x="260.9552"
+         y="-150.37584"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Courier;-inkscape-font-specification:Courier"
+         id="tspan8712">Lab</tspan></text>
+</g><image
      sodipodi:absref="/home/reox/git/metalab_floorplan/Rathausstrasse.jpg"
      xlink:href="Rathausstrasse.jpg"
      y="-4.8223791"
