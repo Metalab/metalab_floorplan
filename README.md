@@ -14,3 +14,8 @@ or this type
 
 # Acknowledgement
 Using Template from https://de.wikipedia.org/wiki/Datei:FRP_Musterplan.svg (released under GPL 1.2 from Uweka and Flor!an)
+
+# See also
+
+* [ASR A1.3](http://www.baua.de/de/Themen-von-A-Z/Arbeitsstaetten/ASR/pdf/ASR-A1-3.pdf?__blob=publicationFile)
+* DIN ISO 23601
