@@ -28,6 +28,7 @@ floorplan.svg: Grundriss.svg
 		--select=layer6 --verb=EditDelete \
 		--select=layer3 --verb=EditDelete \
 		--select=layer8 --verb=EditDelete \
+		--select=layer9 --verb=EditDelete \
 		--verb=FileSave --verb=FileClose --verb=FileQuit
 
 network.svg: Grundriss.svg
@@ -37,6 +38,7 @@ network.svg: Grundriss.svg
 		--select=layer5 --verb=EditDelete \
 		--select=layer6 --verb=EditDelete \
 		--select=layer8 --verb=EditDelete \
+		--select=layer9 --verb=EditDelete \
 		--verb=FileSave --verb=FileClose --verb=FileQuit
 
 export/floorplan.png: floorplan.svg
