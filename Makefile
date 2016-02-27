@@ -1,6 +1,15 @@
-all: rettungsplan.png floorplan.png network.png
-	rm rettungsplan.svg floorplan.svg network.svg
+TARGETS = rettungsplan.png floorplan.png network.png
 
+TARGET_INTERMEDIATE = $(TARGETS:.png=.svg)
+
+TARGETSF = $(addprefix export/, ${TARGETS})
+
+
+all: checks ${TARGETSF}
+	rm ${TARGET_INTERMEDIATE}
+
+checks:
+	[ -d export ] || mkdir export
 
 rettungsplan.svg: Grundriss.svg
 	cp $< $@ 
@@ -30,13 +39,13 @@ network.svg: Grundriss.svg
 		--select=layer8 --verb=EditDelete \
 		--verb=FileSave --verb=FileClose --verb=FileQuit
 
-floorplan.png: floorplan.svg
+export/floorplan.png: floorplan.svg
 	inkscape $< --export-png=$@ --export-dpi=300 --export-area-drawing
 
-network.png: network.svg
+export/network.png: network.svg
 	inkscape $< --export-png=$@ --export-dpi=300 --export-area-drawing
 
-%.png: %.svg
+export/%.png: %.svg
 	inkscape $< --export-png=$@ --export-dpi=300
 
 %.pdf: %.svg

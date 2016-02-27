@@ -5,11 +5,11 @@ version control of the floor plan. Using https://metalab.at/wiki/Datei:Grundriss
 
 Generate images like this one:
 
-![Flucht- und Rettungsplan](rettungsplan.png)
+![Flucht- und Rettungsplan](export/rettungsplan.png)
 
 or this type
 
-![Metalab Overview](floorplan.png)
+![Metalab Overview](export/floorplan.png)
 
 
 # Acknowledgement
