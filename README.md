@@ -1,6 +1,11 @@
 # What is it?
 version control of the floor plan. Using https://metalab.at/wiki/Datei:Grundriss.svg as a base
 
+# Usage / Dependencies
+
+This repository depends on Inkscape 1.2.x and GNU Make (as of Nov 2022). If you have both installed simply run `make` from the command line to generate
+the relevant PNGs.
+
 # What can it do?
 
 Generate images like this one:
