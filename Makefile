@@ -4,52 +4,25 @@ TARGET_INTERMEDIATE = $(TARGETS:.png=.svg)
 
 TARGETSF = $(addprefix export/, ${TARGETS})
 
-
-all: checks ${TARGETSF}
-	rm ${TARGET_INTERMEDIATE}
+all: checks rettungsplan.svg floorplan.svg network.svg
 
 checks:
 	[ -d export ] || mkdir export
 
 rettungsplan.svg: Grundriss.svg
-	cp $< $@ 
-	# TODO this will open up the gui...
-	inkscape $@ \
-		--select=layer1 --verb=EditDelete \
-		--select=layer4 --verb=EditDelete \
-		--select=layer3 --verb=EditDelete \
-		--verb=FileSave --verb=FileClose --verb=FileQuit
+	cp $< $@
+	inkscape --batch-process --actions="select-by-id:layer1; delete-selection; select-by-id:layer4;	delete-selection; select-by-id:layer3; delete-selection; export-filename:export/rettungsplan.png; export-do;" $@
+	rm $@
 
 floorplan.svg: Grundriss.svg
 	cp $< $@ 
-	# TODO this will open up the gui...
-	inkscape $@ \
-		--select=layer5 --verb=EditDelete \
-		--select=layer6 --verb=EditDelete \
-		--select=layer3 --verb=EditDelete \
-		--select=layer8 --verb=EditDelete \
-		--select=layer9 --verb=EditDelete \
-		--verb=FileSave --verb=FileClose --verb=FileQuit
+	inkscape --batch-process --actions="select:layer5; delete; select:layer6; delete; select:layer3; delete; select:layer8; delete; select:layer9; delete; export-filename:export/floorplan.png; export-do;" $@
+	rm $@
 
 network.svg: Grundriss.svg
 	cp $< $@ 
-	# TODO this will open up the gui...
-	inkscape $@ \
-		--select=layer5 --verb=EditDelete \
-		--select=layer6 --verb=EditDelete \
-		--select=layer8 --verb=EditDelete \
-		--select=layer9 --verb=EditDelete \
-		--verb=FileSave --verb=FileClose --verb=FileQuit
+	inkscape --batch-process --actions="select:layer5; delete; select:layer6; delete; select:layer8; delete; select:layer9; delete; export-filename:export/network.png; export-do" $@
+	rm $@
 
-export/floorplan.png: floorplan.svg
-	inkscape $< --export-png=$@ --export-dpi=300 --export-area-drawing
-
-export/network.png: network.svg
-	inkscape $< --export-png=$@ --export-dpi=300 --export-area-drawing
-
-export/%.png: %.svg
-	inkscape $< --export-png=$@ --export-dpi=300
-
-%.pdf: %.svg
-	inkscape $< --export-pdf=$@ --export-dpi=300
-
+clean: 
+	rm -f ${TARGET_INTERMEDIATE} ${TARGETSF}
